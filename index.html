@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <!--
+      This <head> section sets up metadata used by browsers and social networks.
+      You typically edit the <title> and meta description to match the person.
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Shown in search previews / link previews -->
+    <meta name="description"
+        content="Academic portfolio of José Maria Marques — PhD candidate research in CFD and numerical simulation of atmospheric gas discharges, plasma–gas interactions." />
+    <!-- Tells the browser the page supports both light and dark UI -->
+    <meta name="color-scheme" content="dark light" />
+
+    <!-- Open Graph tags: used when sharing the site on Slack/LinkedIn/etc. -->
+    <meta property="og:title" content="José Maria Marques — CNRS/IMFT PhD Student & Teaching" />
+    <meta property="og:description"
+        content="Numerical simulation of atmospheric gas discharges and plasma–gas interactions. Research, publications, and teaching activities." />
+    <meta property="og:type" content="website" />
+
+    <title>José Maria D. C. Marques — PhD Student </title>
+
+    <!-- Load the stylesheet (visual design) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- "Skip to content" helps keyboard users jump past navigation -->
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Top anchor target for "back to top" and brand link -->
+    <div id="top" aria-hidden="true"></div>
+
+    <!-- Global navigation bar (sticky at the top on scroll) -->
+    <!-- Navigation links scroll to the sections with matching IDs (#about, #research, ...) -->
+    <nav class="nav" aria-label="Primary">
+        <!-- This is the "brand" link; it scrolls to the top of the page -->
+        <a class="brand" href="#top">José M. D. C. Marques</a>
+
+        <ul class="nav-links">
+            <li><a href="#about">Overview</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#teaching">Teaching</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#profile">About Me</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <!-- Theme toggle: the button is "wired up" by script.js -->
+            <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
+                <span class="theme-toggle__icon" aria-hidden="true"></span>
+                <span class="theme-toggle__text">Theme</span>
+            </button>
+        </div>
+    </nav>
+
+    <!--
+      Site header:
+      - hero section (the big intro area)
+    -->
+    <header class="site-header">
+        <!-- Hero: main headline + quick links -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">PhD Student • CFD • Plasma–gas interactions</p>
+                    <h1>Hello, I’m <span class="accent">José M. D. C. Marques</span>.</h1>
+                    <p class="lead">
+                        I am a PhD student at CNRS and <a href="https://www.imft.fr/" target="_blank"> Toulouse
+                            Institute of Fluid Mechanics (IMFT)</a>, under the
+                        supervision of <a href="https://www.imft.fr/pages-personnelles/fabre-david/"
+                            target="_blank">David Fabre</a> and
+                        and <a href="https://franckplouraboue.net/" target="_blank">Franck Plouraboué</a>.
+                        My research focuses on the numerical modelling of plasma-fluid
+                        interactions of athmospheric gas
+                        discharges, namely in the presence of an external flow.
+                        The numerical study of plasma-fluid interactions is complex, given that the equations are
+                        hyperbolic, non-linear and multiscale,
+                        I therefore implement numerical schemes following classical and stabilized finite element
+                        methods, as well as
+                        asymptotic and perturbative analysis.
+                        My PhD is funded by Horizon <a href="https://www.iprop-project.eu/" target="_blank"> EIC
+                            Pathfinder project "IPROP"</a>, which focuses on developping
+                        propulsive applications of ionic wind. Therefore I also study the design and optimization of
+                        such propulsive systems for real-life applications.
+                        I also spend quite some time teaching mostly mathematics and numerical methods methods for
+                        mechanics, both theoreticcal and hands on with Python and FreeFem++.
+                        Before starting my PhD, I did a double-bachelor in physics and mathematics at the <a
+                            href="https://sciences.sorbonne-universite.fr/" target="_blank">Sorbonne
+                            Université - Sciences</a>, and
+                        <a href="https://m2ingmath.math.upmc.fr/" target="_blank">Masters in Applied Mathematics
+                            specialised for mechanical engeneering</a>, with a Master thesis at the <a
+                            href="https://observatoiredeparis.psl.eu/" target="_blank">Observatoir de Paris</a>
+                        studying non-colisional relaxation of electron distribution functions of the solar wind.
+                    </p>
+                    <div class="hero-cta">
+                        <a class="btn primary" href="#research">Research</a>
+                        <a class="btn" href="#contact">Contact</a>
+                        <a class="btn primary" href="assets/cv/CV_Marques.pdf" download>
+                            CV
+                        </a>
+                    </div>
+                    <div class="hero-links" aria-label="Quick links">
+                        <!-- target="_blank" opens a new tab; rel="noopener noreferrer" is a security best-practice -->
+                        <a class="pill" href="https://github.com/dartacavalo" rel="noopener noreferrer"
+                            target="_blank">GitHub</a>
+                        <a class="pill" href="https://gitlab.com/jmdcm2000" rel="noopener noreferrer"
+                            target="_blank">GitLab</a>
+                        <a class="pill" href="https://www.linkedin.com/in/jose-mdcm-marques" rel="noopener noreferrer"
+                            target="_blank">LinkedIn</a>
+                        <a class="pill"
+                            href="https://scholar.google.com/citations?hl=pt-PT&authuser=1&user=wP4SqmsAAAAJ"
+                            rel="noopener noreferrer" target="_blank">Google Scholar</a>
+                        <!-- mailto: opens the user's email client -->
+                        <a class="pill" href="mailto:josemaria.diascoelhomarques@toulouse-inp.fr">Email</a>
+                    </div>
+                </div>
+
+                <!--
+                  Media area (top-right on desktop):
+                  Put your looping GIF at: assets/hero.gif.
+                  Whether it loops forever is controlled by how the GIF was exported.
+                -->
+                <figure class="hero-media" aria-label="Simulation visualization">
+                    <img src="assets/hero-loop-count.gif"
+                        alt="Animated visualization of a numerical simulation (replace with your own GIF)" width="960"
+                        height="720" loading="eager" />
+                    <figcaption class="muted hero-caption">
+                        Example: Electric field lines and ion density contours with increasng external flow speed, for a
+                        cylindrical emitter and two NACA0012 collectors, from 1 to 12 m/s of external flow speed.
+                    </figcaption>
+                </figure>
+            </div>
+
+            <!-- Moved "big square" (highlights card) below the hero grid -->
+            <div class="container hero-highlights">
+                <div class="hero-card" aria-label="Highlights">
+                    <div class="stat">
+                        <div class="stat__label">Focus</div>
+                        <div class="stat__value"> Reactive CFD • Gas Discharges • Multiphysics</div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="stat">
+                        <div class="stat__label">Currently</div>
+                        <div class="stat__value">Numerical methods & high-fidelity Finite Element simulation</div>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="stat">
+                        <div class="stat__label">Open to</div>
+                        <div class="stat__value">Research collaborations</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <!--
+      <main> contains the core page content.
+      The id="main" matches the "Skip to content" link at the top.
+    -->
+    <main id="main">
+
+        <!-- Overview: who the person is + key skills/tools -->
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Overview</h2>
+                    <p class="muted">
+                        I’m a PhD student working on numerical simulation for atmospheric gas discharges in interaction
+                        with external flows, specifically
+                        corona discharges and
+                        plasma–gas interactions, with a strong interest in robust numerical and fast methods,
+                        particularly the so called stabilized finite element methods.
+                    </p>
+                </div>
+
+                <div class="grid two">
+                    <div class="card">
+                        <h3>Research interests</h3>
+                        <p>
+                            CFD, reactive media, athmospheric plasmas, transport & reaction models, hyperbolic
+                            equations, non-linear
+                            equations, and
+                            numerical simulation, stabilized finite element methods, asymptotical and perturbative
+                            analysisics.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Tools & methods</h3>
+                        <!-- "Chips" are just a nice visual list of keywords -->
+                        <ul class="chips" aria-label="Skills list">
+                            <li>CFD</li>
+                            <li>Domain Decomposition Methods</li>
+                            <li>Finite Element Methods</li>
+                            <li>Stabilized Methods</li>
+                            <li>Multiphysics Numerical Coupling</li>
+                            <li>FreeFem++</li>
+                            <li>Python</li>
+                            <li>MATLAB</li>
+                            <li>Git</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research: topics + links to publications and researcher IDs -->
+        <section id="research" class="section">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Research</h2>
+                    <p class="muted">
+                        <!-- My work sits at the intersection of fluid dynamics, plasma physics, and numerical simulation. -->
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Publications</h3>
+
+                    <ul class="publication-list">
+
+                        <li class="publication">
+
+                            <div class="pub-title">
+                                <strong>Two-way perturbative coupling of plasma–fluid interactions</strong>
+                            </div>
+
+                            <div class="pub-authors">
+                                <strong>J M Dias Coelho Marques</strong>, D. Fabre, F. Plouraboué. (2025).
+                            </div>
+
+                            <div class="pub-venue">
+                                Journal of Physics D: Applied Physics.
+                            </div>
+
+                            <div class="pub-links">
+                                <a class="link" href="https://iopscience.iop.org/article/10.1088/1361-6463/ae07f9"
+                                    target="_blank">Paper</a>
+                                <!-- <a class="link" href="#" target="_blank">Preprint</a>
+                                <a class="link" href="#" target="_blank">Code</a> -->
+                            </div>
+                            <!-- 
+                            <p class="abstract">
+                                Short abstract describing the problem, the numerical method, and the main results.
+                            </p> -->
+
+                        </li>
+
+                        <li class="publication">
+
+                            <div class="pub-title">
+                                <strong>Numerical Configuration Study of Ionic Wind for Propulsion via a Two-Way
+                                    Electro-Aero-Dynamic Modelling.</strong>
+                            </div>
+
+                            <div class="pub-authors">
+                                <strong>J M Dias Coelho Marques</strong>, D. Fabre, F. Plouraboué. (2025).
+                            </div>
+
+                            <div class="pub-venue">
+                                EUCASS proceedings (conference paper).
+                            </div>
+
+                            <div class="pub-links">
+                                <a class="link" href="assets/papers/Marques_EUCASS.pdf" target="_blank">Paper (PDF)</a>
+                            </div>
+
+                            <!--<p class="abstract">
+                                Study of numerical stability and accuracy trade-offs in coupled plasma–fluid
+                                models for atmospheric discharges.
+                            </p> -->
+                        </li>
+
+                        <li class="publication">
+
+                            <div class="pub-title">
+                                <strong>Probing Turbulent Scattering Effects on Suprathermal Electrons in the Solar
+                                    Wind:
+                                    Modeling, Observations, and Implications.</strong>
+                            </div>
+
+                            <div class="pub-authors">
+                                Arnaud Zaslavsky, Justin C. Kasper, Eduard P. Kontar, Davin E. Larson, Milan Maksimovic,
+                                <strong> José M. D. C. Marques </strong>, Georgios Nicolaou, Christopher J. Owen,
+                                Orlando
+                                Romeo, and Phyllis L. Whittlesey (2024).
+                            </div>
+
+                            <div class="pub-venue">
+                                The Astrophysical Journal.
+                            </div>
+
+                            <div class="pub-links">
+                                <a class="link" href="https://iopscience.iop.org/article/10.3847/1538-4357/ad2e92"
+                                    target="_blank">Paper</a>
+                            </div>
+
+                            <!--<p class="abstract">
+                                Study of numerical stability and accuracy trade-offs in coupled plasma–fluid
+                                models for atmospheric discharges.
+                            </p> -->
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Talks</h3>
+
+                    <ul class="publication-list">
+
+                        <li class="publication">
+
+                            <div class="pub-title">
+                                <strong>Perturbative Two-Way Plasma-Fluid interactions</strong>
+                            </div>
+
+                            <div class="pub-authors">
+                                <strong>J M Dias Coelho Marques</strong>, D. Fabre, F. Plouraboué. (2025).
+                            </div>
+
+                            <div class="pub-venue">
+                                Gaseous Electronics Conference (GEC), Seoul, 2025
+                            </div>
+
+                            <div class="pub-links">
+                                <a class="link" href="assets/talks/Marques_Presentation_GEC_Final.pdf" target="_blank">
+                                    Slides (PDF)
+                                </a>
+                            </div>
+
+                        </li>
+
+
+                        <li class="publication">
+
+                            <div class="pub-title">
+                                <strong>Numerical Configuration Study of Ionic Wind for Propulsion via a Two-Way
+                                    Electro-Aero-Dynamic Modelling.</strong>
+                            </div>
+
+                            <div class="pub-authors">
+                                <strong>J M Dias Coelho Marques</strong>, D. Fabre, F. Plouraboué. (2025).
+                            </div>
+
+                            <div class="pub-venue">
+                                EUCASS proceedings (conference paper).
+                            </div>
+
+                            <div class="pub-links">
+                                <a class="link" href="assets/talks/Eucass_IPROP_General_Meeting_Rome.pdf"
+                                    target="_blank">Paper (PDF)</a>
+                            </div>
+
+                            <!--<p class="abstract">
+                                Study of numerical stability and accuracy trade-offs in coupled plasma–fluid
+                                models for atmospheric discharges.
+                            </p> -->
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Conference Posters</h3>
+
+                    <ul class="publication-list">
+
+                        <li class="publication">
+
+                            <div class="pub-title">
+                                <strong>Two-Way Electro-Hydro-Dynamic Coupling Modeling of Ionic Wind with an External
+                                    Flow</strong>
+                            </div>
+
+                            <div class="pub-authors">
+                                <strong>J M Dias Coelho Marques</strong>, D. Fabre, F. Plouraboué. (2025).
+                            </div>
+
+                            <div class="pub-venue">
+                                International Conference on Phenomena in Ionized Gases (ICPIG), Aix en Provence, 2025
+                            </div>
+
+                            <div class="pub-links">
+                                <a class="link" href="assets/poster/ICPIG_Poster.pdf" target="_blank">
+                                    Poster (PDF)
+                                </a>
+                            </div>
+                        </li>
+
+                        <li class="publication">
+
+                            <div class="pub-title">
+                                <strong>Two-Way Electro-Hydro-Dynamic Coupling Modeling of Ionic Wind with an External
+                                    Flow</strong>
+                            </div>
+
+                            <div class="pub-authors">
+                                <strong>J M Dias Coelho Marques</strong>, D. Fabre, F. Plouraboué. (2024).
+                            </div>
+
+                            <div class="pub-venue">
+                                American Physical Society : Division Fluid Dynamics (APS-DFD), Salt Lake City, 2024
+                            </div>
+
+                            <div class="pub-links">
+                                <a class="link" href="assets/poster/APS_Poster.pdf" target="_blank">
+                                    Poster (PDF)
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects: research projects / collaborations. Logo sits to the right of the text. -->
+        <section id="projects" class="section">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Projects</h2>
+                    <p class="muted">Research projects and collaborations.</p>
+                </div>
+
+                <div class="grid one">
+                    <article class="card project">
+                        <div class="project-layout">
+                            <div class="project-text">
+                                <h3>IPROP — Ionic Propulsion Systems for Atmospheric Applications</h3>
+
+                                <p class="muted">
+                                    My PhD research is part of the Horizon EIC Pathfinder project
+                                    <strong>IPROP</strong>,
+                                    which aims to develop propulsive technologies based on ionic wind generated by
+                                    atmospheric plasma discharges. The project brings together researchers in fluid
+                                    mechanics, plasma physics and numerical modelling to explore new propulsion
+                                    concepts.
+                                </p>
+
+                                <p class="muted">
+                                    My contribution focuses on the <strong>numerical modelling of plasma–fluid
+                                        interactions</strong> in the presence of external flow. This involves
+                                    developing and implementing stabilized finite-element numerical schemes to simulate
+                                    coupled plasma transport, charge dynamics and fluid motion in atmospheric discharge
+                                    configurations.
+                                </p>
+
+                                <p class="muted">
+                                    These simulations are used to study the design and optimization of plasma-based
+                                    propulsion devices and to better understand the multiphysics mechanisms governing
+                                    ionic wind generation, as well as allowing practical and easy thruster design and
+                                    testing to accurately estimate thrust, thrust-to-power ratio, and efficiency.
+                                </p>
+
+                                <div class="project-actions">
+                                    <a class="link" href="https://www.iprop-project.eu/">
+                                        Project Website
+                                    </a>
+                                    <a class="link" href="https://www.linkedin.com/in/iprop-project-a4377129b/">
+                                        Project LinkedIn
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Logo sits to the right of the text on wider screens -->
+                            <div class="project-logo">
+                                <img src="assets/images/iprop_logo.png" alt="IPROP logo">
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teaching: courses + public materials -->
+        <section id="teaching" class="section">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Teaching</h2>
+                    <p class="muted">
+                        I teach Mathematics and Numerical Methods at Université de Toulouse III - Paul Sabatier.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>Courses & Activities</h3>
+
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">Sep 2025 - Jan 2026</div>
+                            <div class="timeline-content">
+                                <h4>Teaching Assistant: Mathematical Methods for Mechanics</h4>
+                                <p>32h - 3rd year of Bachelor in Mechanics</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">Sep 2025 - Jan 2026</div>
+                                <div class="timeline-content">
+                                    <h4>Teaching Assistant: Introuction to Mathematics </h4>
+                                    <p>31h - 1st year of Bachelor </p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date">Jan 2025 - May 2025</div>
+                                <div class="timeline-content">
+                                    <h4>Teaching Assistant: Calculus I</h4>
+                                    <p>28h - 1st year of Bachelor in Mathematics</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date">Sep 2024 - Jan 2025</div>
+                                <div class="timeline-content">
+                                    <h4>Teaching Assistant: Numerical Methods (Intro to FEM) - Hands-on <strong>
+                                            FreeFem++ </strong> training </h4>
+                                    <p>28h - 1st year of Masters in Mechanics</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date">Sep 2024 - Jan 2025</div>
+                                <div class="timeline-content">
+                                    <h4>Teaching Assistant: Numerical Methods - Hands-on <strong> Python </strong>
+                                        training</h4>
+                                    <p>8h - 2nd year of Bachelor in Mathematics</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-date">Jan - May 2024</div>
+                                <div class="timeline-content">
+                                    <h4>Lecturer and Teaching Assistant: Advanced Mathematical Methods for Mechanics
+                                    </h4>
+                                    <p>32h - 3rd year of Bachelor</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education: degrees and institutions -->
+        <section id="education" class="section">
+            <div class="container">
+
+                <div class="section-head">
+                    <h2>Education</h2>
+                </div>
+
+                <div class="card">
+                    <h3>University Education</h3>
+
+                    <div class="timeline">
+
+                        <div class="timeline-item">
+                            <div class="timeline-date">2023 – Present</div>
+                            <div class="timeline-content">
+                                <h4>PhD in Fluid Dynamics</h4>
+                                <p>CNRS / <a href="https://www.imft.fr/" target="_blank">Toulouse Institute of Fluid
+                                        Mechanics (IMFT)</a></p>
+                                <p class="muted">Numerical modelling of plasma–fluid interactions in atmospheric gas
+                                    discharges for propulsion. Funded by the <a href="https://www.iprop-project.eu/"
+                                        target="_blank">EIC Pathfinder "IPROP"</a> project.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-date">2021 – 2023</div>
+                            <div class="timeline-content">
+                                <h4>Masters in <a href="https://m2ingmath.math.upmc.fr/" target="_blank">Mathematics and
+                                        Applications specialised for mechanical engineering</a></h4>
+                                <p>Sorbonne Université</p>
+                                <p class="muted">Master thesis on non-collisional relaxation of electron distribution
+                                    functions in the solar wind.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-date">2018 – 2021</div>
+                            <div class="timeline-content">
+                                <h4>Double Bachelor in Physics and Mathematics</h4>
+                                <p>Sorbonne Université</p>
+                                <p class="muted">
+                                    Joint curriculum in fundamental physics and pure/applied mathematics.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Research overview with profile photo slot -->
+        <section id="profile" class="section profile-section">
+            <div class="container profile-grid">
+                <div>
+                    <h2>About Me</h2>
+                    <p class="muted">
+                        I was born in Lisbon, Portugal, and moved to Paris to study physics and mathematics. I moved to
+                        Toulouse after finishing my masters to pursue a PhD.
+                        I am very pationate about both physics and mathematics, which is why I studied in numerical
+                        methods for Partial Differential Equations, as they allow me to make use of and keep discovering
+                        complex mathematical tools, and then use them to study the physics of the fascinating phenomena
+                        that
+                        are athmospheric plasmas or fluid dynamics, as well as many others that I hope to one day study
+                        as well.
+                    </p>
+                    <p class="muted">
+                        Aside from scientifical research, I enjoy learning about anything and everything, and spend
+                        most, if not all, of my free time reading and writting, mainly fiction but also philosophy,
+                        poetry or history.
+                    </p>
+                </div>
+                <figure class="profile-photo" aria-label="Profile photo">
+                    <!-- Replace profile.jpg with your actual photo file name/path -->
+                    <img src="assets/images/profile.jpg" alt="Profile photo of José Maria D. C. Marques">
+                </figure>
+            </div>
+        </section>
+
+        <!-- Contact: email + links -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="section-head">
+                    <h2>Contact</h2>
+                    <p class="muted">If you want to collaborate or chat, reach out.</p>
+                </div>
+
+                <div class="grid two">
+                    <div class="card">
+                        <h3>Get in touch</h3>
+                        <p class="muted">
+                            Best way to reach me is email. I’m also active on GitHub and LinkedIn.
+                        </p>
+                        <div class="contact-actions">
+                            <a class="btn primary" href="mailto:josemaria.diascoelhomarques@toulouse-inp.fr">Email
+                                me</a>
+                            <a class="btn linkedin" href="https://www.linkedin.com/in/jose-mdcm-marques">Connect with
+                                me</a>
+                            <a class="btn" href="https://github.com/dartacavalo" rel="noopener noreferrer"
+                                target="_blank">GitHub</a>
+                            <a class="btn" href="https://gitlab.com/jmdcm2000" rel="noopener noreferrer"
+                                target="_blank">GitLab</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h3>Details</h3>
+                        <dl class="details">
+                            <div>
+                                <dt>Email</dt>
+                                <dd><a class="link"
+                                        href="mailto:josemaria.diascoelhomarques@toulouse-inp.fr">josemaria.diascoelhomarques@toulouse-inp.fr</a>
+                                </dd>
+                            </div>
+                            <div>
+                                <dt>Location</dt>
+                                <dd class="muted">Toulouse, France</dd>
+                            </div>
+                            <div>
+                                <dt>Links</dt>
+                                <dd>
+                                    <a class="link" href="https://github.com/dartacavalo" rel="noopener noreferrer"
+                                        target="_blank">GitHub</a>
+                                    <span class="muted">·</span>
+                                    <a class="link" href="https://gitlab.com/jmdcm2000" rel="noopener noreferrer"
+                                        target="_blank">GitLab</a>
+                                    <span class="muted">·</span>
+                                    <a class="link" href="https://www.linkedin.com/in/jose-mdcm-marques"
+                                        rel="noopener noreferrer" target="_blank">LinkedIn</a>
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer: small site footer + "back to top" link -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p class="muted">© 2026 José Maria D. C. Marques</p>
+            <a class="link" href="#top">Back to top</a>
+        </div>
+    </footer>
+
+    <!-- Loads the theme toggle + small enhancements -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
