@@ -41,7 +41,7 @@ body {
   --muted: rgba(255, 255, 255, 0.72);
   --border: rgba(255, 255, 255, 0.14);
   --shadow: 0 20px 70px rgba(0, 0, 0, 0.35);
-  --accent: #7c5cff;
+  --accent: #ad94ff;
   --accent-2: #22c55e;
   --ring: rgba(124, 92, 255, 0.35);
   --pub-author-color: #bebcbc;
@@ -198,6 +198,20 @@ a {
   align-items: center;
 }
 
+.nav-menu {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 26px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 .theme-toggle {
   display: inline-flex;
   align-items: center;
@@ -223,7 +237,7 @@ a {
 }
 
 .theme-toggle__text {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--muted);
 }
 
@@ -276,7 +290,7 @@ a {
 
 .eyebrow {
   margin: 0 0 14px;
-  font-size: 14px;
+  font-size: 16px;
   color: var(--muted);
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -313,12 +327,19 @@ a {
   border-radius: 12px;
   border: 1px solid var(--border);
   background: var(--bg-elev);
-  color: var(--text);
+  color: var(--bg);
   text-decoration: none;
   font-weight: 600;
 }
 
 .btn.primary {
+  /* Primary button uses accent gradient */
+  border-color: color-mix(in oklab, var(--accent), transparent 35%);
+  background: linear-gradient(135deg, color-mix(in oklab, var(--accent), white 5%), var(--accent));
+  box-shadow: 0 10px 35px color-mix(in oklab, var(--accent), transparent 70%);
+}
+
+.btn.secondary {
   /* Primary button uses accent gradient */
   border-color: color-mix(in oklab, var(--accent), transparent 35%);
   background: linear-gradient(135deg, color-mix(in oklab, var(--accent), white 5%), var(--accent));
@@ -360,7 +381,7 @@ a {
 }
 
 .stat__label {
-  font-size: 13px;
+  font-size: 16px;
   color: var(--muted);
   margin-bottom: 4px;
 }
@@ -419,6 +440,7 @@ a {
   border-radius: var(--radius);
   padding: 18px;
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
 }
 
 .card h3 {
@@ -558,7 +580,7 @@ a {
   /* fixed width for alignment */
   font-weight: bold;
   color: var(--textdate);
-  margin-left: 20px;
+  margin-left: 5px;
   /* add space from the left edge */
   text-align: right;
   /* THIS makes the date align to the right of its column */
@@ -665,6 +687,27 @@ a {
   /* Phone: hide the top nav links (keeps layout clean). */
   .nav-links {
     display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    gap: 16px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: var(--card);
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+
+  .nav-menu.active {
+    display: flex;
   }
 
   .grid.two {
