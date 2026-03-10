@@ -244,6 +244,7 @@ a {
 /* Hero */
 .hero {
   padding: 56px 0 18px;
+  padding-bottom: 40px;
 }
 
 .hero-grid {
@@ -409,7 +410,7 @@ a {
 }
 
 .section-head p {
-  margin: 10px 0 0;
+  margin: 10px 0 15px;
   max-width: 70ch;
 }
 
