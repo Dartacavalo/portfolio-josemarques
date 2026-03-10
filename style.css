@@ -653,6 +653,7 @@ a {
 
 .project-text {
   flex: 1;
+  text-align: justify;
 }
 
 .project-logo img {
