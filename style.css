@@ -683,18 +683,22 @@ a {
   align-items: center;
 }
 
+/* To move image down relative to left text, add margin-top */
+.profile-photo.custom-position {
+  margin-top: 50px;
+  /* adjust this value as needed */
+}
+
 .profile-photo {
   margin: 0;
   justify-self: center;
-  align-self: end;
-  /* top-aligned with left card */
-  /* options: start, center, end, stretch */
+  margin-top: 60px;
 }
 
 .profile-photo img {
   display: block;
-  width: 225px;
-  height: 225px;
+  width: 210px;
+  height: 210px;
   border-radius: 999px;
   object-fit: cover;
   border: 2px solid var(--border);
