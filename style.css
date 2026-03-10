@@ -666,6 +666,16 @@ a {
   background: color-mix(in oklab, var(--bg), transparent 8%);
 }
 
+.profile-text p {
+  text-align: justify;
+  /* this will now apply */
+  line-height: 1.6;
+}
+
+#profile p.muted {
+  text-align: justify;
+}
+
 .profile-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
