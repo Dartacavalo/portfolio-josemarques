@@ -413,6 +413,10 @@ a {
   max-width: 70ch;
 }
 
+.research-overview {
+  max-width: none;
+}
+
 .grid {
   /* Simple grid helper; variants (.two, .three) set the column count */
   display: grid;
