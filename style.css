@@ -115,7 +115,7 @@ a {
 
 /* Common layout helper: centers content and limits max width */
 .container {
-  width: min(100% - 40px, var(--container));
+  width: min(100% - 0px, var(--container));
   margin-inline: auto;
 }
 
