@@ -636,6 +636,11 @@ a {
   margin-bottom: 5px;
 }
 
+.pub-doi {
+  font-size: 0.95rem;
+  margin-bottom: 5px;
+}
+
 .pub-links a {
   margin-right: 10px;
 }
